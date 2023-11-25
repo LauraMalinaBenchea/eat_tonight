@@ -1,0 +1,25 @@
+{% load static tailwind_tags %}
+{% load crispy_forms_tags %}
+<head>
+  <title>{% block title %}
+
+      {% endblock %}</title>
+    {% tailwind_css %}
+</head>
+
+<body>
+<div class="text-center font-serif text-lg leading-none tracking-tight text-gray-900 md:text-5xl dark:text-white">
+    <h3>Create your recipe</h3>
+    <br>
+</div>
+<div class="w-full max-w-xl mx-auto px-1">
+    <form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    <button type="submit" class="btn-blue"  value="Submit">Submit</button>
+</form>
+</div>
+</body>
