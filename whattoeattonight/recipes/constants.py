@@ -1,5 +1,3 @@
-from django.utils.translation import gettext_lazy as _l
-
 # measuring_system = [
 #     "International System of Units",
 #     "British Imperial System",

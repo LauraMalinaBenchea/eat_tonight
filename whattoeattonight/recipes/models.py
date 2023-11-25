@@ -1,13 +1,17 @@
 from django.db import models
+
 from .constants import measuring_units
 
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=50, verbose_name="Ingredient")
-    measuring_unit = models.TextField(choices=measuring_units, verbose_name="Measuring Unit")
+    measuring_unit = models.TextField(
+        choices=measuring_units, verbose_name="Measuring Unit"
+    )
 
     def __str__(self):
         return self.name
+
 
 # TODO consider cooking methods?
 
@@ -24,7 +28,3 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
-

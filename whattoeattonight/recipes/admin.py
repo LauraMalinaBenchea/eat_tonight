@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Recipe, Ingredient
+from .models import Ingredient, Recipe
 
 # TODO update this file to include recent models
 

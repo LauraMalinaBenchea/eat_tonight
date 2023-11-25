@@ -1,21 +1,30 @@
-from django.urls import reverse
 from django.test import TestCase
-
+from django.urls import reverse
 from recipes.models import Recipe
 
 # TODO add more tests for all views, models and forms
 
 
 class TestRecipeIndexViewTestCase(TestCase):
-
     def create_recipe(self):
         """
         Create a recipe with the given name, description, step and portions.
         Check that the names are properly saved.
         """
-        recipe1 = Recipe(name="Chicken Soup", description="Delicious chicken soup", steps="Step 1", portions=1,
-                         duration=1)
-        recipe2 = Recipe(name="Beef Soup", description="Delicious beef soup", steps="Step 1", portions=1, duration=1)
+        recipe1 = Recipe(
+            name="Chicken Soup",
+            description="Delicious chicken soup",
+            steps="Step 1",
+            portions=1,
+            duration=1,
+        )
+        recipe2 = Recipe(
+            name="Beef Soup",
+            description="Delicious beef soup",
+            steps="Step 1",
+            portions=1,
+            duration=1,
+        )
         self.assertEqual(recipe1.name, "Chicken Soup")
         self.assertEqual(recipe2.name, "Beef Soup")
 

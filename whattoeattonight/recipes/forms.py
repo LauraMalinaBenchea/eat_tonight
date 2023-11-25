@@ -1,4 +1,5 @@
 from django import forms
+
 from .models import Ingredient, Recipe
 
 
@@ -7,7 +8,7 @@ class RecipeBaseForm(forms.ModelForm):
         required=True,
         label="Ingredients",
         widget=forms.CheckboxSelectMultiple,
-        queryset=Ingredient.objects.all()
+        queryset=Ingredient.objects.all(),
     )
 
     class Meta:
